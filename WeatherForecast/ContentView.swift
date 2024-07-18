@@ -2,20 +2,29 @@
 //  ContentView.swift
 //  WeatherForecast
 //
-//  Created by 河野礼嗣 on 2024/07/17.
-//
+
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        HStack {
+            VStack {
+                Text("Mon")
+                Image(systemName: "sun.max.fill").foregroundColor(Color.red)
+                Text("High: 25")
+                Text("Low: 13")
+            }
+            .padding()
+            
+            VStack {
+                Text("Tue")
+                Image(systemName: "cloud.rain.fill").foregroundColor(Color.blue)
+                Text("High: 20")
+                Text("Low: 8")
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
