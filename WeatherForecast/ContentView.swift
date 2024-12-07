@@ -60,8 +60,15 @@ struct DayForecast: View {
             Image(systemName: iconName).foregroundColor(iconColor)
                 .font(Font.largeTitle)
                 .padding(5)
-            Text("High: \(high)")
-                .fontWeight(Font.Weight.semibold)
+            
+            if (high > 24) {
+                Text("High: \(high)")
+                    .fontWeight(Font.Weight.semibold).foregroundStyle(Color.red)
+            } else {
+                Text("High: \(high)")
+                    .fontWeight(Font.Weight.semibold)
+            }
+                
             Text("Low: \(low)")
                 .fontWeight(Font.Weight.semibold)
                 .foregroundColor(Color.secondary)
